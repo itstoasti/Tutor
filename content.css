@@ -1,0 +1,10 @@
+#study-assistant-answer {
+  position: fixed;
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  max-width: 400px;
+  z-index: 10000;
+  font-family: system-ui, -apple-system, sans-serif;
+}

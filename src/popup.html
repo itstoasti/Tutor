@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Study Assistant Pro</title>
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="../icons/icon48.png" alt="Logo" class="logo">
+      <h1>Study Assistant Pro</h1>
+    </div>
+
+    <div class="api-key-section" id="apiKeySection">
+      <div class="api-key-input">
+        <input type="password" id="apiKey" placeholder="Enter your OpenAI API key">
+        <div class="key-status" id="keyStatus">
+          <svg class="valid-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6L9 17l-5-5"/>
+          </svg>
+          <svg class="invalid-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </div>
+      </div>
+      <div class="key-message" id="keyMessage"></div>
+      <button id="saveKey">Save Key</button>
+    </div>
+
+    <div class="main-content">
+      <textarea id="questionInput" placeholder="Type your question or highlight text on any webpage"></textarea>
+      
+      <div class="button-group">
+        <button id="askButton" class="primary">Ask Question</button>
+        <button id="captureButton" class="secondary">
+          Capture Screen
+          <span class="shortcut-hint">
+            (Ctrl+Shift+S / ⌘+Shift+S)
+          </span>
+        </button>
+      </div>
+
+      <div class="answer-section">
+        <div id="loadingSpinner" class="hidden">
+          <div class="spinner"></div>
+          <p>Analyzing...</p>
+        </div>
+        <div id="answer" class="answer-box"></div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Tip: Right-click any text to ask about it!</p>
+    </div>
+  </div>
+  <script type="module" src="js/popup.js"></script>
+</body>
+</html>

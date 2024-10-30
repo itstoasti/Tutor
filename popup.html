@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Study Assistant</title>
+  <link href="popup.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="icons/icon48.png" alt="Logo" class="logo">
+      <h1>Study Assistant</h1>
+    </div>
+
+    <div class="api-key-section" id="apiKeySection">
+      <input type="password" id="apiKey" placeholder="Enter your OpenAI API key">
+      <button id="saveKey">Save Key</button>
+    </div>
+
+    <div class="main-content">
+      <textarea id="questionInput" placeholder="Type your question or highlight text on any webpage"></textarea>
+      
+      <div class="button-group">
+        <button id="askButton" class="primary">Ask Question</button>
+        <button id="captureButton" class="secondary">Capture Screen Area</button>
+      </div>
+
+      <div class="answer-section">
+        <div id="loadingSpinner" class="hidden">
+          <div class="spinner"></div>
+          <p>Analyzing...</p>
+        </div>
+        <div id="answer" class="answer-box"></div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Tip: Right-click any text to ask about it!</p>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
